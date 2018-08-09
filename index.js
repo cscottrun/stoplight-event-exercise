@@ -9,8 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
 //use lister to apply toggle method when clicked
 
 const stopButton = document.getElementById('stopButton')
+const stopButtonText = document.getElementById('stopButton').innerText
 const slowButton = document.getElementById('slowButton')
+const slowButtonText = document.getElementById('slowButton').innerText
 const goButton = document.getElementById('goButton')
+const goButtonText = document.getElementById('goButton').innerText
   
 const stopLight = document.getElementById('stopLight')
 const slowLight = document.getElementById('slowLight')
@@ -29,6 +32,26 @@ goButton.addEventListener('click', (ev) => {
   goLight.classList.toggle('go');
 })
 
+stopButton.addEventListener('mouseenter', (ev) => {
+  console.log (`Entered ${stopButtonText} button`)
+})
+stopButton.addEventListener('mouseleave', (ev) => {
+  console.log (`Left ${stopButtonText} button`)
+})
+
+slowButton.addEventListener('mouseenter', (ev) => {
+  console.log (`Entered ${slowButtonText} button`)
+})
+slowButton.addEventListener('mouseleave', (ev) => {
+  console.log (`Left ${slowButtonText} button`)
+})
+
+goButton.addEventListener('mouseenter', (ev) => {
+  console.log (`Entered ${goButtonText} button`)
+})
+goButton.addEventListener('mouseleave', (ev) => {
+  console.log (`Left ${goButtonText} button`)
+})
 
 })
 
